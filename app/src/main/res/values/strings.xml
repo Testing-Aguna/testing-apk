@@ -1,3 +1,25 @@
 <resources>
-    <string name="app_name">aguna-app</string>
+    <string name="app_name">Aguna</string>
+    <string name="login_with_google">Login With Google</string>
+    <string name="login_button_description">Login with Google Account</string>
+    <string name="authentication_failed">Authentication Failed</string>
+    <string name="alert_exit_app">Exit App</string>
+    <string name="yes">ya</string>
+    <string name="no">tidak</string>
+    <string name="daftar">Daftar</string>
+    <string name="nama_lengkap">Nama Lengkap</string>
+    <string name="masukkan_nama_lengkap">Masukkan Nama Lengkap</string>
+    <string name="email">Email</string>
+    <string name="masukkan_email">Masukkan Email</string>
+    <string name="atau">Atau</string>
+    <string name="daftar_dengan_google">Daftar Dengan Google</string>
+    <string name="password">Password</string>
+    <string name="masukkan_password">Masukkan Password</string>
+    <string name="retype_password">Retype Password</string>
+    <string name="masukkan_ulang_password">Masukkan Ulang Password</string>
+    <string name="sudah_punya_akun_masuk">Sudah Punya Akun? Masuk</string>
+    <string name="masuk">Masuk</string>
+    <string name="lupa_kata_sandi">Lupa Kata Sandi?</string>
+    <string name="belum_punya_akun_daftar">Belum Punya Akun? Daftar</string>
+    <string name="masuk_dengan_google">Masuk Dengan Google</string>
 </resources>
