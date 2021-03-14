@@ -8,12 +8,11 @@
         android:id="@+id/mainFragment"
         android:name="com.aguna.app.presentation.MainFragment"
         android:label="MainFragment"
-        tools:layout="@layout/fragment_main"
-        >
+        tools:layout="@layout/fragment_main">
         <argument
             android:name="fromSignUp"
-            app:argType="boolean"
-            android:defaultValue="true" />
+            android:defaultValue="true"
+            app:argType="boolean" />
         <action
             android:id="@+id/action_mainFragment_to_signInFragment"
             app:destination="@id/signInFragment" />
@@ -23,8 +22,7 @@
         android:id="@+id/signUpFragment"
         android:name="com.aguna.app.presentation.auth.SignUpFragment"
         android:label="SignUpFragment"
-        tools:layout="@layout/fragment_sign_up"
-        >
+        tools:layout="@layout/fragment_sign_up">
         <action
             android:id="@+id/action_signUpFragment_to_signInFragment"
             app:destination="@id/signInFragment" />
@@ -37,8 +35,7 @@
         android:id="@+id/signInFragment"
         android:name="com.aguna.app.presentation.auth.SignInFragment"
         android:label="SignInFragment"
-        tools:layout="@layout/fragment_sign_in"
-        >
+        tools:layout="@layout/fragment_sign_in">
         <action
             android:id="@+id/action_signInFragment_to_mainFragment"
             app:destination="@id/mainFragment" />
@@ -53,8 +50,7 @@
         android:id="@+id/forgotPasswordFragment"
         android:name="com.aguna.app.presentation.auth.ForgotPasswordFragment"
         android:label="ForgotPasswordFragment"
-        tools:layout="@layout/fragment_forgot_password"
-        >
+        tools:layout="@layout/fragment_forgot_password">
         <action
             android:id="@+id/action_forgotPasswordFragment_to_signInFragment"
             app:destination="@id/signInFragment" />

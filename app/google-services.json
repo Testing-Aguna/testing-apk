@@ -1,0 +1,47 @@
+{
+  "project_info": {
+    "project_number": "295290850165",
+    "project_id": "aguna-app",
+    "storage_bucket": "aguna-app.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:295290850165:android:548169a42b067674fa213c",
+        "android_client_info": {
+          "package_name": "com.aguna.app"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "295290850165-cdodefjjs4bbcn4t1f6eca1v2rhnfunu.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.aguna.app",
+            "certificate_hash": "d47ab22584a26cf84bb39ba8f5f3886bdc0adc3b"
+          }
+        },
+        {
+          "client_id": "295290850165-1ke8ob52kj7qdvaf4rc1e89aeckeadsh.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCBaCE3mK41k3nG2xXGZZviYu3GhsEtyms"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "295290850165-1ke8ob52kj7qdvaf4rc1e89aeckeadsh.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
