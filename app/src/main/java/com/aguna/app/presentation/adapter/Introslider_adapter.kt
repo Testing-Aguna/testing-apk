@@ -1,4 +1,4 @@
-package com.aguna.app.presentation
+package com.aguna.app.presentation.adapter
 
 import android.view.LayoutInflater
 import android.view.View
@@ -7,6 +7,7 @@ import android.widget.ImageView
 import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView
 import com.aguna.app.R
+import com.aguna.app.model.introslide
 
 class introslider_adapter (private val introslide: List<introslide>)
     : RecyclerView.Adapter<introslider_adapter.IntroSlideViewHolder>(){

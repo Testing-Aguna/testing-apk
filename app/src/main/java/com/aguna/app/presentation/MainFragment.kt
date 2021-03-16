@@ -56,7 +56,6 @@ class MainFragment : Fragment() {
         configureGoogleSignIn()
         val user = firebaseAuth.currentUser
         if (user == null && bool) {
-            Toast.makeText(context, bool.toString(), Toast.LENGTH_SHORT).show()
             findNavController().navigate(R.id.action_mainFragment_to_signInFragment)
         }
     }

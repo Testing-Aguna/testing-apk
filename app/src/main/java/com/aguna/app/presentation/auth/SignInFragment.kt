@@ -48,6 +48,12 @@ class SignInFragment : Fragment(), View.OnClickListener{
     override fun onStart() {
         super.onStart()
         firebaseAuth = FirebaseAuth.getInstance()
+        configureGoogleSignIn()
+        val user = firebaseAuth.currentUser
+        if (user != null) {
+            updateUserInfoAndUI()
+        }
+        firebaseAuth = FirebaseAuth.getInstance()
 
     }
 
@@ -148,7 +154,6 @@ class SignInFragment : Fragment(), View.OnClickListener{
                         // Sign in success, update UI with the signed-in user's information
                         Log.d(TAG, "signInWithEmail:success")
                         findNavController().navigate(R.id.action_signInFragment_to_mainFragment)
-                        val user = firebaseAuth.currentUser
                     } else {
                         showLoading(false)
                         // If sign in fails, display a message to the user.

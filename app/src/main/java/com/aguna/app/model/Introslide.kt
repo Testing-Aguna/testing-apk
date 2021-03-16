@@ -1,4 +1,4 @@
-package com.aguna.app.presentation
+package com.aguna.app.model
 
 class introslide (
     val title: String,
