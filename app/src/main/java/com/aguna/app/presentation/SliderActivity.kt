@@ -13,7 +13,7 @@ import androidx.core.view.get
 import androidx.viewpager2.widget.ViewPager2
 import com.aguna.app.R
 import com.aguna.app.model.introslide
-import com.aguna.app.presentation.adapter.introslider_adapter
+import com.aguna.app.adapter.introslider_adapter
 import kotlinx.android.synthetic.main.activity_splash_slider.*
 
 class SliderActivity : AppCompatActivity() {

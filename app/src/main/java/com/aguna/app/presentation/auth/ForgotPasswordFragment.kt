@@ -42,7 +42,6 @@ class ForgotPasswordFragment : Fragment(), View.OnClickListener {
         when (v.id){
             R.id.btn_reset_password -> {
                 if (validateEmail()) resetPassword()
-                findNavController().navigate(R.id.action_forgotPasswordFragment_to_signInFragment)
             }
         }
     }
@@ -71,6 +70,10 @@ class ForgotPasswordFragment : Fragment(), View.OnClickListener {
                 .addOnCompleteListener { task ->
                     if (task.isSuccessful) {
                         Toast.makeText(context, "Link Reset Password Sudah Terkirim", Toast.LENGTH_SHORT).show()
+                        findNavController().navigate(R.id.action_forgotPasswordFragment_to_signInFragment)
+                    }
+                    else {
+                        Toast.makeText(context, "Email Tidak Valid", Toast.LENGTH_SHORT).show()
                     }
                 }
     }

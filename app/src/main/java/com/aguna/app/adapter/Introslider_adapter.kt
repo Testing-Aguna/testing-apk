@@ -1,4 +1,4 @@
-package com.aguna.app.presentation.adapter
+package com.aguna.app.adapter
 
 import android.view.LayoutInflater
 import android.view.View

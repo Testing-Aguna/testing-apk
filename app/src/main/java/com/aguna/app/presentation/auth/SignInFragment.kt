@@ -1,5 +1,6 @@
 package com.aguna.app.presentation.auth
 
+import android.app.AlertDialog
 import android.content.Intent
 import android.os.Bundle
 import android.util.Log
@@ -49,12 +50,6 @@ class SignInFragment : Fragment(), View.OnClickListener{
         super.onStart()
         firebaseAuth = FirebaseAuth.getInstance()
         configureGoogleSignIn()
-        val user = firebaseAuth.currentUser
-        if (user != null) {
-            updateUserInfoAndUI()
-        }
-        firebaseAuth = FirebaseAuth.getInstance()
-
     }
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
@@ -131,7 +126,7 @@ class SignInFragment : Fragment(), View.OnClickListener{
     }
 
     private fun updateUserInfoAndUI() {
-        findNavController().navigate(R.id.action_signUpFragment_to_mainFragment)
+        findNavController().navigate(R.id.action_signInFragment_to_mainFragment)
     }
 
     private fun showToastMessage(message: String) {
@@ -153,7 +148,14 @@ class SignInFragment : Fragment(), View.OnClickListener{
                         showLoading(false)
                         // Sign in success, update UI with the signed-in user's information
                         Log.d(TAG, "signInWithEmail:success")
-                        findNavController().navigate(R.id.action_signInFragment_to_mainFragment)
+                        val firebaseUser = task.result?.user
+                        val emailVerified = firebaseUser?.isEmailVerified
+                        if (emailVerified == true) {
+                            updateUserInfoAndUI()
+                        }
+                        else {
+                           showDialog()
+                        }
                     } else {
                         showLoading(false)
                         // If sign in fails, display a message to the user.
@@ -195,5 +197,52 @@ class SignInFragment : Fragment(), View.OnClickListener{
         val pattern: Pattern = Patterns.EMAIL_ADDRESS
         return pattern.matcher(email).matches()
     }
+    private fun showDialog(){
+        val title = "${resources.getString(R.string.verification_email_sent_to)} ${firebaseAuth.currentUser?.email}"
+        val message = resources.getString(R.string.please_check_your_email)
 
+        val alertDialog = AlertDialog.Builder(requireContext())
+        alertDialog.setTitle(title)
+        alertDialog.setMessage(message)
+        alertDialog.setPositiveButton(getString(R.string.check_email)) { _, _ ->
+        }
+        alertDialog.setNegativeButton(getString(R.string.resend_verification)) {_, _ ->
+            sendVerificationEmail()
+        }
+        alertDialog.show()
+
+    }
+    private fun sendVerificationEmail() {
+        firebaseAuth.currentUser?.sendEmailVerification()
+            ?.addOnCompleteListener { task ->
+                if (task.isSuccessful) {
+                    showLoading(false)
+                    showToastMessage("${resources.getString(R.string.verification_email_sent_to)} ${firebaseAuth.currentUser?.email}")
+                } else {
+                    showLoading(false)
+                    showToastMessage("Failed to send verification email.")
+                    Log.w(SignUpFragment.TAG, "sendVerificationEmail:failure", task.exception)
+                    firebaseAuth.currentUser?.delete()
+                }
+            }
+            ?.addOnFailureListener { exception ->
+                showLoading(false)
+                handleException(exception)
+            }
+    }
+
+    private fun handleException(exception: Exception?) {
+        //exception is null
+        when(exception){
+            is FirebaseAuthUserCollisionException -> {
+                Toast.makeText(context, "Email Sudah Digunakan", Toast.LENGTH_SHORT).show()
+            }
+            is FirebaseNetworkException -> Toast.makeText(
+                context,
+                "Tidak Ada Jaringan",
+                Toast.LENGTH_SHORT
+            ).show()
+            else -> Toast.makeText(context, "Coba Lagi", Toast.LENGTH_SHORT).show()
+        }
+    }
 }

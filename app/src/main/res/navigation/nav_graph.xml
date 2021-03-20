@@ -9,10 +9,7 @@
         android:name="com.aguna.app.presentation.MainFragment"
         android:label="MainFragment"
         tools:layout="@layout/fragment_main">
-        <argument
-            android:name="fromSignUp"
-            android:defaultValue="true"
-            app:argType="boolean" />
+
         <action
             android:id="@+id/action_mainFragment_to_signInFragment"
             app:destination="@id/signInFragment" />
