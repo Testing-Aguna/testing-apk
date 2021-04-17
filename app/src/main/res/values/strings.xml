@@ -46,4 +46,12 @@
     <string name="history">History</string>
     <string name="chat">Chat</string>
     <string name="profile">Profile</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="masukkan_kode_otp">Masukkan kode OTP yang telah dikirimkan melalui SMS</string>
+    <string name="submit">Submit</string>
+    <string name="otp_verification">OTP Verification</string>
+    <string name="kirim_ulang">Kirim ulang</string>
+    <string name="hubungi_kami">Hubungi Kami</string>
+    <string name="kode_otp_belum_terkirim">Kode OTP belum terkirim?</string>
 </resources>

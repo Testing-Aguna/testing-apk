@@ -13,4 +13,7 @@
     <color name="txt_color_sign">#4D4D4D</color>
     <color name="txt_color_sign_item">#B3000000</color>
     <color name="btn_sign">#349ED9</color>
+    <color name="header_border">#8AB6B6B6</color>
+    <color name="btn_hijau">#3FCB5D</color>
+
 </resources>
