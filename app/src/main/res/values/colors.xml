@@ -13,6 +13,11 @@
     <color name="txt_color_sign">#4D4D4D</color>
     <color name="txt_color_sign_item">#B3000000</color>
     <color name="btn_sign">#349ED9</color>
+    <color name="upper_profile">#52B8DF</color>
+    <color name="version_profile">#81000000</color>
+    <color name="logout_profile">#CE3636</color>
+    <color name="border_profile">#8AB6B6B6</color>
+    <color name="line_text_profile">#A7A7A7</color>
     <color name="header_border">#8AB6B6B6</color>
     <color name="btn_hijau">#3FCB5D</color>
 
