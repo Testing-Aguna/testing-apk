@@ -86,4 +86,5 @@
     <string name="re_type_kata_password">Re-type Kata Password</string>
     <string name="masukan_ulang_password_baru">Masukan ulang password baru</string>
     <string name="ganti_password">GANTI PASSWORD</string>
+    <string name="title_activity_profile_acitivity">ProfileAcitivity</string>
 </resources>

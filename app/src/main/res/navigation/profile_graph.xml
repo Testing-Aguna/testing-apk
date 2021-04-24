@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto" android:id="@+id/profile_graph"
+    app:startDestination="@id/profileFragment">
+
+    <fragment
+        android:id="@+id/profileFragment"
+        android:name="com.aguna.app.presentation.profile.ProfileFragment"
+        android:label="ProfileFragment" >
+        <action
+            android:id="@+id/action_profileFragment_to_faqFragment"
+            app:destination="@id/faqFragment" />
+        <action
+            android:id="@+id/action_profileFragment_to_bantuanFragment"
+            app:destination="@id/bantuanFragment" />
+        <action
+            android:id="@+id/action_profileFragment_to_tentangFragment"
+            app:destination="@id/tentangFragment" />
+        <action
+            android:id="@+id/action_profileFragment_to_dataProfile"
+            app:destination="@id/dataProfile" />
+        <action
+            android:id="@+id/action_profileFragment_to_aturPasswordFragment"
+            app:destination="@id/aturPasswordFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/faqFragment"
+        android:name="com.aguna.app.presentation.profile.FaqFragment"
+        android:label="FaqFragment" >
+        <action
+            android:id="@+id/action_faqFragment_to_profileFragment"
+            app:destination="@id/profileFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/bantuanFragment"
+        android:name="com.aguna.app.presentation.profile.BantuanFragment"
+        android:label="BantuanFragment" >
+        <action
+            android:id="@+id/action_bantuanFragment_to_profileFragment"
+            app:destination="@id/profileFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/tentangFragment"
+        android:name="com.aguna.app.presentation.profile.TentangFragment"
+        android:label="TentangFragment" >
+        <action
+            android:id="@+id/action_tentangFragment_to_profileFragment"
+            app:destination="@id/profileFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/dataProfile"
+        android:name="com.aguna.app.presentation.profile.DataProfile"
+        android:label="DataProfile" >
+        <action
+            android:id="@+id/action_dataProfile_to_profileFragment"
+            app:destination="@id/profileFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/aturPasswordFragment"
+        android:name="com.aguna.app.presentation.profile.AturPasswordFragment"
+        android:label="AturPasswordFragment" >
+        <action
+            android:id="@+id/action_aturPasswordFragment_to_profileFragment"
+            app:destination="@id/profileFragment" />
+    </fragment>
+</navigation>

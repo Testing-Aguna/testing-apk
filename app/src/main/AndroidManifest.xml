@@ -9,7 +9,12 @@
         android:roundIcon="@drawable/aguna_logo"
         android:supportsRtl="true"
         android:theme="@style/Theme.Agunaapp">
-        <activity android:name=".presentation.MainActivity"></activity>
+        <activity android:name=".presentation.ProfileActivity"></activity>
+        <activity
+            android:name=".presentation.ProfileAcitivity"
+            android:label="@string/title_activity_profile_acitivity"
+            android:theme="@style/Theme.Agunaapp.NoActionBar" />
+        <activity android:name=".presentation.MainActivity" />
         <activity
             android:name=".presentation.SplashScreenActivity"
             android:screenOrientation="portrait">

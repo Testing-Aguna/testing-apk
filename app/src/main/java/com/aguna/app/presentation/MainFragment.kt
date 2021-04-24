@@ -13,6 +13,7 @@ import com.aguna.app.R
 import com.aguna.app.presentation.chat.ChatFragment
 import com.aguna.app.presentation.history.HistoryFragment
 import com.aguna.app.presentation.home.HomeFragment
+import com.aguna.app.presentation.profile.MainProfile
 import com.aguna.app.presentation.profile.ProfileFragment
 import com.google.android.material.bottomnavigation.BottomNavigationView
 import com.google.firebase.auth.FirebaseAuth
@@ -72,8 +73,8 @@ class MainFragment : Fragment() {
                     true
                 }
                 R.id.navigation_profile -> {
-                    val profileFragment = ProfileFragment()
-                    fragmentTransaction.replace(R.id.fl_fragment_container, profileFragment)
+                    val MainProfile = MainProfile()
+                    fragmentTransaction.replace(R.id.fl_fragment_container, MainProfile)
                     fragmentTransaction.commit()
                     true
                 }
