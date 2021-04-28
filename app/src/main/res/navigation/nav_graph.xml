@@ -13,6 +13,10 @@
         <action
             android:id="@+id/action_mainFragment_to_signInFragment"
             app:destination="@id/signInFragment" />
+        <action
+            android:id="@+id/action_mainFragment_to_categoryFragment"
+            app:destination="@id/categoryFragment"
+            />
 
     </fragment>
     <fragment
@@ -52,5 +56,44 @@
             android:id="@+id/action_forgotPasswordFragment_to_signInFragment"
             app:destination="@id/signInFragment" />
     </fragment>
+    <fragment
+        android:id="@+id/categoryFragment"
+        android:name="com.aguna.app.presentation.home.category.CategoryFragment"
+        android:label="fragment_category"
+        tools:layout="@layout/fragment_category" >
+        <action
+            android:id="@+id/action_categoryFragment_to_detailsCategoryFragment"
+            app:destination="@id/detailsCategoryFragment"
+            />
+        <argument
+            android:name="listItem"
+            app:argType="com.aguna.app.model.ItemCategory[]"
+            app:nullable="true"
+            android:defaultValue="@null"
+            />
+    </fragment>
+    <fragment
+        android:id="@+id/detailsCategoryFragment"
+        android:name="com.aguna.app.presentation.home.details.DetailsCategoryFragment"
+        android:label="DetailsCategoryFragment"
+        tools:layout="@layout/fragment_details_category"
+        >
 
+        <argument
+            android:name="listItem"
+            app:argType="com.aguna.app.model.ItemCategory[]"
+            app:nullable="true"
+            />
+        <action
+            android:id="@+id/action_detailsCategoryFragment_to_categoryFragment"
+            app:destination="@id/categoryFragment"
+            app:popUpTo="@id/categoryFragment"
+            app:popUpToInclusive="true"
+            />
+        <action
+            android:id="@+id/action_detailsCategoryFragment_to_mainFragment"
+            app:destination="@id/mainFragment"
+            app:launchSingleTop="true"
+            />
+    </fragment>
 </navigation>

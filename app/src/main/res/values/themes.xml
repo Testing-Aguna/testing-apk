@@ -22,4 +22,9 @@
     <style name="Theme.Agunaapp.AppBarOverlay" parent="ThemeOverlay.AppCompat.Dark.ActionBar" />
 
     <style name="Theme.Agunaapp.PopupOverlay" parent="ThemeOverlay.AppCompat.Light" />
+
+    <style name="spinnerItemStyle" parent="android:Widget.TextView.SpinnerItem">
+        <item name="android:textColor">@color/color_spinner</item>
+        <item name="fontFamily">@font/montserrat_regular</item>
+    </style>
 </resources>

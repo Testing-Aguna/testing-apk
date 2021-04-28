@@ -13,4 +13,13 @@
     <color name="txt_color_sign">#4D4D4D</color>
     <color name="txt_color_sign_item">#B3000000</color>
     <color name="btn_sign">#349ED9</color>
+    <color name="color1">#52B8DF</color>
+    <color name="color_prev_trans">#8A000000</color>
+    <color name="border">#E5E5E5</color>
+    <color name="main_category">#A3DB67</color>
+    <color name="detail_bot">#3E3E3E</color>
+    <color name="color_detail_category">#4D4D4D</color>
+    <color name="color_edit_detail">#52B8DF</color>
+    <color name="color_spinner">#2691BA</color>
+    <color name="bg_spinner">#E7F8FF</color>
 </resources>

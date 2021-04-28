@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:paddingVertical="8dp"
+    android:paddingHorizontal="20dp"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <TextView
+        android:id="@+id/txt_name_item"
+        android:layout_width="0dp"
+        app:layout_constraintWidth_percent="0.25"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toTopOf="@id/edit_number_item"
+        app:layout_constraintBottom_toBottomOf="@id/edit_number_item"
+        app:layout_constraintLeft_toLeftOf="parent"
+        android:text="Botol PET"
+        android:textSize="14sp"
+        android:textColor="@color/color_detail_category"
+        android:textStyle="bold"
+        android:fontFamily="@font/montserrat_regular"
+        />
+
+    <TextView
+        android:id="@+id/txt_price_item"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toTopOf="@id/edit_number_item"
+        app:layout_constraintBottom_toBottomOf="@id/edit_number_item"
+        app:layout_constraintRight_toRightOf="@id/divider"
+        android:layout_marginEnd="10dp"
+        android:text="Rp 700/kg"
+        android:textSize="11sp"
+        android:textColor="@color/color_detail_category"
+        android:fontFamily="@font/montserrat_regular"
+        tools:ignore="SmallSp" />
+    <EditText
+        android:id="@+id/edit_number_item"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintLeft_toRightOf="@id/divider"
+        android:layout_marginStart="20dp"
+        android:gravity="center"
+        android:textSize="14sp"
+        android:inputType="number"
+        android:textColor="@color/color_edit_detail"
+        android:fontFamily="@font/montserrat_regular"
+        />
+
+    <TextView
+        android:id="@+id/txt_kg"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toTopOf="@id/edit_number_item"
+        app:layout_constraintBottom_toBottomOf="@id/edit_number_item"
+        app:layout_constraintLeft_toRightOf="@id/edit_number_item"
+        android:layout_marginStart="10dp"
+        android:text="@string/kg"
+        android:textSize="14sp"
+        android:textColor="@color/color_detail_category"
+        android:fontFamily="@font/mulish"
+        />
+
+    <TextView
+        android:id="@+id/txt_total_price_item"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toTopOf="@id/edit_number_item"
+        app:layout_constraintBottom_toBottomOf="@id/edit_number_item"
+        app:layout_constraintRight_toRightOf="parent"
+        android:text="Rp 140000"
+        android:textSize="14sp"
+        android:textColor="@color/color_detail_category"
+        android:fontFamily="@font/mulish"
+        />
+
+    <View
+        android:id="@+id/divider"
+        android:layout_width="1dp"
+        android:layout_height="20dp"
+        android:background="?android:attr/listDivider"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

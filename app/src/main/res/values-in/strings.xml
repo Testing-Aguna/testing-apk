@@ -46,5 +46,20 @@
     <string name="home">Home</string>
     <string name="history">History</string>
     <string name="chat">Chat</string>
-    <string name="profile">Profile</string>
+    <string name="profile">Profil</string>
+    <string name="aguna">aguna</string>
+    <string name="previous_transactions">Transaksi Sebelumya</string>
+    <string name="trash_category">Kategori Sampah</string>
+    <string name="trash_info">Info Sampah</string>
+    <string name="sell_trash">Jual Sampah</string>
+    <string name="offer">Penawaran</string>
+    <string name="dapatkan_berbagai_penawaran_menarik_untuk_anda">Dapatkan berbagai penawaran menarik untuk anda</string>
+    <string name="news">Berita</string>
+    <string name="hai_aguna">Hai, Aguna</string>
+    <string name="sell">Jual</string>
+    <string name="your_rating">Rating Anda</string>
+    <string name="berita_menarik_aguna_siap_menemani_hari_anda">Berita menarik aguna siap menemani hari anda</string>
+    <string name="kg">Kg</string>
+
+
 </resources>
