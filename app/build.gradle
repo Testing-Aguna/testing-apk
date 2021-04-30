@@ -80,7 +80,9 @@ dependencies {
 
     //PhotoStore
     implementation 'de.hdodenhof:circleimageview:2.1.0'
+    implementation 'com.squareup.picasso:picasso:2.71828'
 
     //   Multidex
     implementation 'com.android.support:multidex:1.0.3'
+
 }

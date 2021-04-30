@@ -19,6 +19,7 @@ import com.aguna.app.presentation.MainActivity
 import com.google.firebase.auth.FirebaseAuth
 import com.google.firebase.storage.FirebaseStorage
 import com.google.firebase.storage.StorageReference
+import com.squareup.picasso.Picasso
 import kotlinx.android.synthetic.main.fragment_profile.*
 import kotlinx.android.synthetic.main.fragment_profile.view.*
 import kotlinx.android.synthetic.main.fragment_sign_in.*
@@ -54,6 +55,23 @@ class ProfileFragment : Fragment() {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
         auth = FirebaseAuth.getInstance()
+
+        val user = auth.currentUser
+        if (user != null){
+            if (user.photoUrl != null){
+                Picasso.get().load(user.photoUrl).into(imageView2)
+            } else{
+                Picasso.get().load("@drawable/profile_avatar").into(imageView2)
+            }
+            textView2.setText(user.displayName)
+            textView3.setText(user.email)
+
+            if (user.displayName != null){
+                textView2.setText(user.displayName)
+            } else{
+                textView2.setText("Aguners")
+            }
+        }
 
         //    Logout
         textView16.setOnClickListener{
