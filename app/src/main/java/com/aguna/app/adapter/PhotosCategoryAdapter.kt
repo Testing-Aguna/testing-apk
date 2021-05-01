@@ -2,9 +2,6 @@ package com.aguna.app.adapter
 
 import android.annotation.SuppressLint
 import android.content.Context
-import android.graphics.ImageDecoder
-import android.os.Build
-import android.provider.MediaStore
 import android.util.Log
 import android.view.LayoutInflater
 import android.view.View
@@ -19,7 +16,6 @@ import com.bumptech.glide.Glide
 import com.bumptech.glide.load.resource.bitmap.RoundedCorners
 import java.io.File
 
-import java.io.IOException
 
 
 class PhotosCategoryAdapter : RecyclerView.Adapter<PhotosCategoryAdapter.ListViewHolder>() {
