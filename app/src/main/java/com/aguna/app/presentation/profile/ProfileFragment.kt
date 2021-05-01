@@ -58,18 +58,13 @@ class ProfileFragment : Fragment() {
 
         val user = auth.currentUser
         if (user != null){
-            if (user.photoUrl != null){
-                Picasso.get().load(user.photoUrl).into(imageView2)
-            } else{
-                Picasso.get().load("@drawable/profile_avatar").into(imageView2)
-            }
             textView2.setText(user.displayName)
             textView3.setText(user.email)
 
             if (user.displayName != null){
                 textView2.setText(user.displayName)
             } else{
-                textView2.setText("Aguners")
+                textView2.text = "Aguners"
             }
         }
 
@@ -121,6 +116,7 @@ class ProfileFragment : Fragment() {
                         it.result?.let {
                             imageUri= it
                             imageView2.setImageBitmap(imgBitmap)
+                            val user = auth.currentUser
                         }
                     }
                 }

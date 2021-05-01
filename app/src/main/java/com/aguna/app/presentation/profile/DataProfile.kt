@@ -40,16 +40,10 @@ class DataProfile : Fragment() {
         val user = auth.currentUser
 
         textView24.setOnClickListener {
-            val image = when{
-                ::imageUri.isInitialized -> imageUri
-                user?.photoUrl == null -> Uri.parse("@drawable/profile_avatar")
-                else -> user.photoUrl
-            }
 
             val name = editTextNamaLengkap.text.toString().trim()
             UserProfileChangeRequest.Builder()
                 .setDisplayName(name)
-                .setPhotoUri(image)
                 .build().also {
                     user?.updateProfile(it)?.addOnCompleteListener {
                         if (it.isSuccessful){
