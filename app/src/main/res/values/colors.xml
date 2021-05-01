@@ -21,4 +21,15 @@
     <color name="header_border">#8AB6B6B6</color>
     <color name="btn_hijau">#3FCB5D</color>
 
+    <color name="color1">#52B8DF</color>
+    <color name="color_prev_trans">#8A000000</color>
+    <color name="border">#E5E5E5</color>
+    <color name="main_category">#A3DB67</color>
+    <color name="detail_bot">#3E3E3E</color>
+    <color name="color_detail_category">#4D4D4D</color>
+    <color name="color_edit_detail">#52B8DF</color>
+    <color name="color_spinner">#2691BA</color>
+    <color name="bg_spinner">#E7F8FF</color>
+	
+
 </resources>

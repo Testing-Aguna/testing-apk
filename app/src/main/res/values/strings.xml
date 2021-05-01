@@ -46,8 +46,6 @@
     <string name="history">History</string>
     <string name="chat">Chat</string>
     <string name="profile">Profile</string>
-
-    <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>
     <string name="masukkan_kode_otp">Masukkan kode OTP yang telah dikirimkan melalui SMS</string>
     <string name="submit">Submit</string>
@@ -87,4 +85,17 @@
     <string name="masukan_ulang_password_baru">Masukan ulang password baru</string>
     <string name="ganti_password">GANTI PASSWORD</string>
     <string name="title_activity_profile_acitivity">ProfileAcitivity</string>
+    <string name="aguna">aguna</string>
+    <string name="previous_transactions">Previous Transactions</string>
+    <string name="your_rating">Your Rating</string>
+    <string name="trash_category">Trash Category</string>
+    <string name="trash_info">Trash Info</string>
+    <string name="sell_trash">Sell Trash</string>
+    <string name="offer">Offer</string>
+    <string name="dapatkan_berbagai_penawaran_menarik_untuk_anda">Dapatkan berbagai penawaran menarik untuk anda</string>
+    <string name="news">News</string>
+    <string name="berita_menarik_aguna_siap_menemani_hari_anda">Berita menarik aguna siap menemani hari anda</string>
+    <string name="hai_aguna">Hai, Aguna</string>
+    <string name="sell">Sell</string>
+    <string name="kg">Kg</string>
 </resources>

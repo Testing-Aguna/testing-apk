@@ -47,14 +47,17 @@ dependencies {
     implementation 'androidx.legacy:legacy-support-v4:1.0.0'
     implementation 'com.google.firebase:firebase-database:19.2.1'
     implementation 'com.google.firebase:firebase-storage:19.1.1'
+    implementation 'com.google.firebase:firebase-firestore-ktx:22.1.2'
     testImplementation 'junit:junit:4.+'
     androidTestImplementation 'androidx.test.ext:junit:1.1.2'
     androidTestImplementation 'androidx.test.espresso:espresso-core:3.3.0'
 
     // firebase
     implementation 'com.google.android.gms:play-services-auth:19.0.0'
-    implementation 'com.google.firebase:firebase-auth:20.0.3'
+    implementation 'com.google.firebase:firebase-auth:20.0.4'
     implementation platform('com.google.firebase:firebase-bom:26.7.0')
+    implementation 'com.firebaseui:firebase-ui-storage:4.3.2'
+    implementation 'com.firebaseui:firebase-ui-firestore:6.2.1'
     implementation 'com.google.firebase:firebase-auth-ktx'
 
     //multi dex
@@ -79,10 +82,14 @@ dependencies {
     implementation 'me.biubiubiu.justifytext:library:1.1'
 
     //PhotoStore
-    implementation 'de.hdodenhof:circleimageview:2.1.0'
+    implementation 'de.hdodenhof:circleimageview:3.1.0'
     implementation 'com.squareup.picasso:picasso:2.71828'
 
     //   Multidex
     implementation 'com.android.support:multidex:1.0.3'
+    implementation 'com.github.bumptech.glide:glide:4.12.0'
+    kapt 'com.github.bumptech.glide:compiler:4.12.0'
+    implementation 'com.makeramen:roundedimageview:2.3.0'
+    implementation'com.github.devdhar04:MaterialSpinner:v0.1.2'
 
 }
