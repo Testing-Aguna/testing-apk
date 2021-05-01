@@ -1,10 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:tools="http://schemas.android.com/tools"
     package="com.aguna.app">
-    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
-    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE"
-        tools:ignore="ScopedStorage" />
 
     <application
         android:allowBackup="true"
@@ -12,10 +8,12 @@
         android:label="@string/app_name"
         android:roundIcon="@drawable/aguna_logo"
         android:supportsRtl="true"
-        android:theme="@style/Theme.Agunaapp"
-        android:largeHeap="true"
-        android:hardwareAccelerated="false"
-        >
+        android:theme="@style/Theme.Agunaapp">
+        <activity android:name=".presentation.ProfileActivity"></activity>
+        <activity
+            android:name=".presentation.ProfileAcitivity"
+            android:label="@string/title_activity_profile_acitivity"
+            android:theme="@style/Theme.Agunaapp.NoActionBar" />
         <activity android:name=".presentation.MainActivity" />
         <activity
             android:name=".presentation.SplashScreenActivity"
