@@ -8,6 +8,7 @@ import androidx.lifecycle.viewModelScope
 import com.aguna.app.firebase.Firebase
 import com.aguna.app.model.News
 import com.aguna.app.model.Offer
+import com.google.firebase.firestore.FirebaseFirestore
 import com.google.firebase.storage.FirebaseStorage
 import com.google.firebase.storage.StorageReference
 import kotlinx.coroutines.launch
@@ -20,8 +21,10 @@ class HomeViewModel : ViewModel() {
 
     private var firebaseStorage: FirebaseStorage? = null
     private var storageReference: StorageReference? = null
+    private var firebaseFirestore : FirebaseFirestore? = null
 
     init {
+        firebaseFirestore = FirebaseFirestore.getInstance()
         firebaseStorage = FirebaseStorage.getInstance()
         storageReference = firebaseStorage!!.reference
     }
@@ -29,10 +32,10 @@ class HomeViewModel : ViewModel() {
     init {
         allNews.value = emptyList()
         allOffers.value = emptyList()
-        refreshNotif()
+        this.refreshNotif()
     }
 
-    fun refreshNotif(){
+    private fun refreshNotif(){
         getAllNews()
         getAllOffers()
     }
@@ -47,9 +50,9 @@ class HomeViewModel : ViewModel() {
 
     private fun getAllNews(){
         viewModelScope.launch {
-            Firebase.db.collection(Firebase.NEWS)
-                .get()
-                .addOnSuccessListener {
+            firebaseFirestore?.collection(Firebase.NEWS)
+                ?.get()
+                ?.addOnSuccessListener {
                     val list = mutableListOf<News>()
                     it.forEach{ document ->
                         val news = News(
@@ -63,7 +66,7 @@ class HomeViewModel : ViewModel() {
                     allNews.postValue(list)
                     Log.e("news", "Succeed")
                 }
-                .addOnFailureListener{
+                ?.addOnFailureListener{
                     Log.e("news", "Failed")
                 }
         }
@@ -71,9 +74,9 @@ class HomeViewModel : ViewModel() {
 
     private fun getAllOffers(){
         viewModelScope.launch {
-            Firebase.db.collection(Firebase.OFFERS)
-                .get()
-                .addOnSuccessListener {
+            firebaseFirestore?.collection(Firebase.OFFERS)
+                ?.get()
+                ?.addOnSuccessListener {
                     val list = mutableListOf<Offer>()
                     it.forEach{ document ->
                         val offer = Offer(
@@ -87,13 +90,13 @@ class HomeViewModel : ViewModel() {
                     allOffers.postValue(list)
                     Log.e("offers", "Succeed")
                 }
-                .addOnFailureListener{
+                ?.addOnFailureListener{
                     Log.e("offers", "Failed")
                 }
         }
     }
 
-    private fun getImage(type: String?, id: String?) : String? {
+    private fun getImage(type: String?, id: String?) : String {
         Log.d("tes", "$type/$id")
         var imgUrl =  ""
         storageReference?.child("$type/$id.png")?.downloadUrl?.addOnSuccessListener {
@@ -107,5 +110,5 @@ class HomeViewModel : ViewModel() {
 
         return imgUrl
     }
-    
+
 }
