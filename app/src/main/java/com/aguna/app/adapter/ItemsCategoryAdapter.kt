@@ -53,6 +53,7 @@ class ItemsCategoryAdapter : RecyclerView.Adapter<ItemsCategoryAdapter.ListViewH
             onItemChangeCallback?.onItemChange(itemCategory)
         }
 
+
     }
 
     override fun getItemCount(): Int {
@@ -70,6 +71,5 @@ class ItemsCategoryAdapter : RecyclerView.Adapter<ItemsCategoryAdapter.ListViewH
     interface OnItemChangeCallback {
         fun onItemChange(itemCategory: ItemCategory)
     }
-
 
 }

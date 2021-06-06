@@ -64,25 +64,25 @@
                 android:layout_marginStart="20dp"
                 />
 
-            <Button
-                android:id="@+id/btn_edit"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                app:layout_constraintTop_toTopOf="@id/txt_your_trash"
-                app:layout_constraintBottom_toBottomOf="@id/txt_your_trash"
-                app:layout_constraintRight_toRightOf="parent"
-                android:text="Edit"
-                android:textColor="@color/color_edit_detail"
-                android:textAllCaps="false"
-                android:drawableEnd="@drawable/ic_fa_regular_edit"
-                android:background="@android:color/transparent"
-                />
+<!--            <Button-->
+<!--                android:id="@+id/btn_edit"-->
+<!--                android:layout_width="wrap_content"-->
+<!--                android:layout_height="wrap_content"-->
+<!--                app:layout_constraintTop_toTopOf="@id/txt_your_trash"-->
+<!--                app:layout_constraintBottom_toBottomOf="@id/txt_your_trash"-->
+<!--                app:layout_constraintRight_toRightOf="parent"-->
+<!--                android:text="Edit"-->
+<!--                android:textColor="@color/color_edit_detail"-->
+<!--                android:textAllCaps="false"-->
+<!--                android:drawableEnd="@drawable/ic_fa_regular_edit"-->
+<!--                android:background="@android:color/transparent"-->
+<!--                />-->
 
             <androidx.recyclerview.widget.RecyclerView
                 android:id="@+id/rv_edit_detail"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                app:layout_constraintTop_toBottomOf="@id/btn_edit"
+                app:layout_constraintTop_toBottomOf="@id/txt_your_trash"
                 />
 
             <androidx.appcompat.widget.AppCompatButton
@@ -245,7 +245,7 @@
                 android:layout_height="wrap_content"
                 app:layout_constraintTop_toBottomOf="@id/sep_get"
                 app:layout_constraintLeft_toLeftOf="parent"
-                android:text="Foto Sampah Anda"
+                android:text="Informasi Tambahan"
                 android:textSize="14sp"
                 android:textColor="@color/color_prev_trans"
                 android:fontFamily="@font/montserrat_semibold"

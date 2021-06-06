@@ -34,6 +34,7 @@ class DetailsCategoryFragment : Fragment(), View.OnClickListener {
     var listPayMethod = arrayListOf(
         "Cash", "Go pay"
     )
+    var removedPosition : Int ? = null
     private var itemsCategoryAdapter : ItemsCategoryAdapter = ItemsCategoryAdapter()
     private var photosCategoryAdapter : PhotosCategoryAdapter = PhotosCategoryAdapter()
     private var spinnerAdapter : SpinnerAdapter = SpinnerAdapter()
@@ -170,6 +171,7 @@ class DetailsCategoryFragment : Fragment(), View.OnClickListener {
 
     override fun onClick(v: View) {
         when (v.id){
+            R.id.btn_min_item -> {items?.remove(itemsCategoryAdapter)}
             R.id.btn_spinner -> {
                 rv_spinner.bringToFront()
                 rv_spinner.visibility = View.VISIBLE
@@ -209,4 +211,5 @@ class DetailsCategoryFragment : Fragment(), View.OnClickListener {
     private fun uploadPhoto(){
         detailsCategoryViewModel.uploadPhoto(transaction)
     }
+
 }
