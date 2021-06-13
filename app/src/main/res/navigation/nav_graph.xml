@@ -95,5 +95,29 @@
             app:destination="@id/mainFragment"
             app:launchSingleTop="true"
             />
+        <action
+            android:id="@+id/action_detailsCategoryFragment_to_jemputFragment"
+            app:destination="@id/jemputFragment" />
+        <action
+            android:id="@+id/action_detailsCategoryFragment_to_datangFragment"
+            app:destination="@id/datangFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/datangFragment"
+        android:name="com.aguna.app.presentation.home.details.datang.DatangFragment"
+        android:label="fragment_datang"
+        tools:layout="@layout/fragment_datang" >
+        <action
+            android:id="@+id/action_datangFragment_to_detailsCategoryFragment"
+            app:destination="@id/detailsCategoryFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/jemputFragment"
+        android:name="com.aguna.app.presentation.home.details.jemput.JemputFragment"
+        android:label="fragment_jemput"
+        tools:layout="@layout/fragment_jemput" >
+        <action
+            android:id="@+id/action_jemputFragment_to_detailsCategoryFragment"
+            app:destination="@id/detailsCategoryFragment" />
     </fragment>
 </navigation>

@@ -205,7 +205,11 @@ class DetailsCategoryFragment : Fragment(), View.OnClickListener {
         transaction.type = type
         detailsCategoryViewModel.addTransaction(transaction)
         uploadPhoto()
-        findNavController().navigate(R.id.action_detailsCategoryFragment_to_mainFragment)
+        if(type=="jemput"){
+            findNavController().navigate(R.id.action_detailsCategoryFragment_to_jemputFragment)
+        } else{
+            findNavController().navigate(R.id.action_detailsCategoryFragment_to_datangFragment)
+        }
     }
 
     private fun uploadPhoto(){

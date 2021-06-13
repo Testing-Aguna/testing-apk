@@ -1,58 +1,79 @@
 package com.aguna.app.presentation.home.details.jemput
 
+import android.annotation.SuppressLint
+import android.app.DatePickerDialog
+import android.content.Context
+import android.content.Intent
 import android.os.Bundle
-import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import android.widget.DatePicker
+import androidx.fragment.app.DialogFragment
+import androidx.fragment.app.Fragment
 import com.aguna.app.R
+import com.aguna.app.model.TaskDto
+import kotlinx.android.synthetic.main.fragment_jemput.*
+import org.threeten.bp.OffsetDateTime
 
-// TODO: Rename parameter arguments, choose names that match
-// the fragment initialization parameters, e.g. ARG_ITEM_NUMBER
-private const val ARG_PARAM1 = "param1"
-private const val ARG_PARAM2 = "param2"
-
-/**
- * A simple [Fragment] subclass.
- * Use the [JemputFragment.newInstance] factory method to
- * create an instance of this fragment.
- */
 class JemputFragment : Fragment() {
-    // TODO: Rename and change types of parameters
-    private var param1: String? = null
-    private var param2: String? = null
+
+//    private var taskDate: TaskDto = TaskDto()
+
+    override fun onCreateView(
+            inflater: LayoutInflater, container: ViewGroup?,
+            savedInstanceState: Bundle?
+    ): View? {
+        // Inflate the layout for this fragment
+        return inflater.inflate(R.layout.fragment_jemput, container, false)
+
+    }
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        arguments?.let {
-            param1 = it.getString(ARG_PARAM1)
-            param2 = it.getString(ARG_PARAM2)
-        }
+//        txt_label_date.setOnClickListener {
+//            showDatePickerDialog()
+//        }
+
     }
 
-    override fun onCreateView(inflater: LayoutInflater, container: ViewGroup?,
-                              savedInstanceState: Bundle?): View? {
-        // Inflate the layout for this fragment
-        return inflater.inflate(R.layout.fragment_jemput, container, false)
-    }
+//    private fun showDatePickerDialog() {
+////        val newFragment: DialogFragment = DatePickerFragment.newInstance(this)
+////        newFragment.show(context.getSupportFragmentManager(), "datePicker")
+//
+////        val newFragment: DialogFragment = DatePickerFragment.newInstance(this)
+////        newFragment.show(requireFragmentManager(), "datePicker")
+//
+//    }
 
-    companion object {
-        /**
-         * Use this factory method to create a new instance of
-         * this fragment using the provided parameters.
-         *
-         * @param param1 Parameter 1.
-         * @param param2 Parameter 2.
-         * @return A new instance of fragment JemputFragment.
-         */
-        // TODO: Rename and change types and number of parameters
-        @JvmStatic
-        fun newInstance(param1: String, param2: String) =
-                JemputFragment().apply {
-                    arguments = Bundle().apply {
-                        putString(ARG_PARAM1, param1)
-                        putString(ARG_PARAM2, param2)
-                    }
-                }
-    }
+//    @SuppressLint("SetTextI18n")
+//    override fun onDateSet(view: DatePicker?, year: Int, month: Int, day: Int) {
+//        taskDate = taskDate.copy(day = day, month = month + 1, year = year)
+//        txt_label_date.text = "$day/${this.taskDate.month}/$year"
+//    }
+//
+//    private fun setTaskDateTime(taskDto: TaskDto): OffsetDateTime {
+//        return OffsetDateTime.of(
+//            taskDto.year,
+//            taskDto.month,
+//            taskDto.day,
+//            taskDto.hour,
+//            taskDto.minute,
+//            0,
+//            0,
+//            OffsetDateTime.now().offset
+//        )
+//    }
+
+//    companion object {
+//        /**
+//         * Start [JemputFragment]
+//         * @param context previous activity
+//         */
+//        fun start(context: Context): Intent {
+//            return Intent(context, JemputFragment::class.java)
+//        }
+//    }
+
+
 }
